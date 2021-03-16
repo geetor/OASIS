@@ -1,0 +1,22 @@
+server:
+  port: 3180
+spring:
+  application:
+    name: nacos-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://114.116.234.243:8848
+      config:
+        server-addr: http://114.116.234.243:8848
+        file-extension: yml
+        timeout: 8000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
